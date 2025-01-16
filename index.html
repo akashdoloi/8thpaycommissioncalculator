@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your salary as per the 8th Pay Commission with this responsive and easy-to-use calculator. Hosted on GitHub for accessibility.">
+    <meta name="keywords" content="8th Pay Commission, salary calculator, pay matrix, DA calculator, government employees">
+    <meta name="author" content="Your Name">
+    <title>8th Pay Commission Salary Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9f7ef;
+            border-left: 5px solid #28a745;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>8th Pay Commission Salary Calculator</h1>
+        <form id="salaryCalculator">
+            <label for="basicSalary">Current Basic Salary (₹):</label>
+            <input type="number" id="basicSalary" name="basicSalary" required>
+
+            <label for="fitmentFactor">Expected Fitment Factor:</label>
+            <input type="number" id="fitmentFactor" name="fitmentFactor" step="0.01" value="2.28" required>
+
+            <label for="daPercentage">Projected DA (%) :</label>
+            <input type="number" id="daPercentage" name="daPercentage" value="70" required>
+
+            <button type="button" onclick="calculateSalary()">Calculate</button>
+        </form>
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Akash. Hosted on <a href="https://github.com">GitHub</a>.
+    </div>
+
+    <script>
+        function calculateSalary() {
+            const basicSalary = parseFloat(document.getElementById('basicSalary').value);
+            const fitmentFactor = parseFloat(document.getElementById('fitmentFactor').value);
+            const daPercentage = parseFloat(document.getElementById('daPercentage').value);
+
+            if (!basicSalary || !fitmentFactor || !daPercentage) {
+                alert('Please fill in all fields with valid numbers.');
+                return;
+            }
+
+            const newBasic = basicSalary * fitmentFactor;
+            const da = (newBasic * daPercentage) / 100;
+            const totalSalary = newBasic + da;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <h2>Salary Breakdown</h2>
+                <p><strong>Revised Basic Salary:</strong> ₹${newBasic.toFixed(2)}</p>
+                <p><strong>Dearness Allowance (DA):</strong> ₹${da.toFixed(2)}</p>
+                <p><strong>Total Salary:</strong> ₹${totalSalary.toFixed(2)}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
