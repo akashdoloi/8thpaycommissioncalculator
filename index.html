@@ -23,6 +23,21 @@
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .main-content {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .sidebar {
+            width: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
 
         h1 {
@@ -83,47 +98,79 @@
 </head>
 <body>
     <div class="container">
-        <h1>8th Pay Commission Salary Calculator</h1>
-
-        
-
-        <form id="salaryCalculator">
-            <label for="basicSalary">Current Basic Salary (₹):</label>
-            <input type="number" id="basicSalary" name="basicSalary" required>
-
-            <label for="fitmentFactor">Expected Fitment Factor:</label>
-            <input type="number" id="fitmentFactor" name="fitmentFactor" step="0.01" value="2.28" required>
-
-            <label for="daPercentage">Projected DA (%) :</label>
-            <input type="number" id="daPercentage" name="daPercentage" value="70" required>
-
-            <button type="button" onclick="calculateSalary()">Calculate</button>
-        </form>
-
-        <div id="result" class="result" style="display: none;"></div>
-<div class="ad-unit">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : '3d0be981880065cb3041afd19295d7b9',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/3d0be981880065cb3041afd19295d7b9/invoke.js"></script>
+        <div class="sidebar">
+            <div class="ad-unit">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'cfa043801320fec13d88965b0e24c3be',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/cfa043801320fec13d88965b0e24c3be/invoke.js"></script>
+            </div>
         </div>
-        <div class="ad-unit">
-            <script type="text/javascript">
-                atOptions = {
-                    'key' : 'cfa043801320fec13d88965b0e24c3be',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                };
-            </script>
-            <script type="text/javascript" src="//www.highperformanceformat.com/cfa043801320fec13d88965b0e24c3be/invoke.js"></script>
+
+        <div class="main-content">
+            <h1>8th Pay Commission Salary Calculator</h1>
+
+            <div class="ad-unit">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '3d0be981880065cb3041afd19295d7b9',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/3d0be981880065cb3041afd19295d7b9/invoke.js"></script>
+            </div>
+
+            <form id="salaryCalculator">
+                <label for="basicSalary">Current Basic Salary (₹):</label>
+                <input type="number" id="basicSalary" name="basicSalary" required>
+
+                <label for="fitmentFactor">Expected Fitment Factor:</label>
+                <input type="number" id="fitmentFactor" name="fitmentFactor" step="0.01" value="2.28" required>
+
+                <label for="daPercentage">Projected DA (%) :</label>
+                <input type="number" id="daPercentage" name="daPercentage" value="70" required>
+
+                <button type="button" onclick="calculateSalary()">Calculate</button>
+            </form>
+
+            <div id="result" class="result" style="display: none;"></div>
+
+            <div class="ad-unit">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'cfa043801320fec13d88965b0e24c3be',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/cfa043801320fec13d88965b0e24c3be/invoke.js"></script>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="ad-unit">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'cfa043801320fec13d88965b0e24c3be',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/cfa043801320fec13d88965b0e24c3be/invoke.js"></script>
+            </div>
         </div>
     </div>
 
